@@ -17,11 +17,11 @@ includes/generated: res/antlr/SysY.g4 res/antlr/CommonLex.g4 res/antlr/antlr-4.1
 
 allres = includes/runtime includes/generated
 
-build/bin/compiler:
+build/bin/DoveCompiler:
 	mkdir -p build
 	cd build && cmake .. -G "Unix Makefiles" && make DoveCompiler
 
-.PHONY: env/conan env/antlr includes/antlruntime include/antlrgenerated all clean build test
+.PHONY: env/conan env/antlr includes/runtime include/generated all clean build test
 .DEFAULT_GOAL := all
 
 all: ${allres}
@@ -29,8 +29,8 @@ all: ${allres}
 clean:
 	rm -rf build
 
-build: build/bin/compiler 
-		@build/bin/compiler --help
+build: build/bin/DoveCompiler
+		@build/bin/DoveCompiler --help
 
 include tests/config.mk
 testFileBase ?= main

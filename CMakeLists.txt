@@ -34,13 +34,13 @@ file(GLOB generated includes/generated/*.cpp includes/generated/*.h)
 add_subdirectory(src)
 
 add_executable(DoveCompiler
-	${generated}
+	# ${generated}
 	"src/main.cc"
 )
 
 
 target_include_directories(DoveCompiler PUBLIC
-	includes/generated
+	# includes/generated
 	src
 )
 # add_subdirectory(tests)
