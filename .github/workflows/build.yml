@@ -31,7 +31,7 @@ jobs:
     - name: Install pip packages
       run: |
             pip install antlr4-tools
-            pip install conan
+            pip install conan==1.60
 
     - name: Download ANTLR
       run: make env/antlr
