@@ -29,7 +29,9 @@ jobs:
       run: pip install --upgrade pip
 
     - name: Install pip packages
-      run: pip install -r requirements.txt
+      run: |
+            pip install antlr
+            pip install conan
 
     - name: Download ANTLR
       run: make env/antlr
