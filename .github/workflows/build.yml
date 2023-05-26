@@ -37,7 +37,7 @@ jobs:
       run: make env/antlr
 
     - name: Prepare Conan
-      run: conan profile detect
+      run: conan profile new default --detect
 
     - name: Generate includes
       run: | 
