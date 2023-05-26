@@ -36,6 +36,9 @@ jobs:
     - name: Download ANTLR
       run: make env/antlr
 
+    - name: Prepare Conan
+      run: conan profile detect
+
     - name: Generate includes
       run: | 
             make includes/runtime 
