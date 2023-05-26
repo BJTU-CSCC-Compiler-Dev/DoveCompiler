@@ -25,6 +25,9 @@ jobs:
         python-version: '3.10'
         cache: 'pip' # caching pip dependencies
     
+    - name: Update pip
+      run: pip install --upgrade pip
+
     - name: Install pip packages
       run: pip install -r requirements.txt
 
