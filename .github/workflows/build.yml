@@ -30,7 +30,7 @@ jobs:
 
     - name: Install pip packages
       run: |
-            pip install antlr
+            pip install antlr4-tools
             pip install conan
 
     - name: Download ANTLR
